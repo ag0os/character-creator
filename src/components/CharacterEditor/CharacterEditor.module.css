@@ -31,7 +31,16 @@
   left: 60%;
   bottom: 5%;
   min-height: 500px;
-
+  /* Add smooth transitions for color changes */
+  transition: all 0.3s ease-in-out;
+  /* Add subtle background to help character stand out */
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  border-radius: 50%;
+  padding: 2rem;
 }
 
 .controlColumn {
@@ -44,5 +53,13 @@
   left: 0;
   height: 40%;
   width: 100%;
-  background-color: cadetblue;
+  /* Enhanced gradient for better depth perception */
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(95, 158, 160, 0.2) 20%,
+    rgba(95, 158, 160, 0.4) 100%
+  );
+  /* Add subtle shadow line at the top for depth */
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
 }

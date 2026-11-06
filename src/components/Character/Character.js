@@ -19,7 +19,7 @@ function Character({
     >
       <g>
         {/* Bodies */}
-        <g>
+        <g className={styles.bodyLayer}>
           {body === 0 && (
             <g fillRule="evenodd" clipRule="evenodd">
               <path
@@ -202,7 +202,7 @@ function Character({
           )}
         </g>
         {/* HEADS */}
-        <g fillRule="evenodd" clipRule="evenodd">
+        <g className={styles.headLayer} fillRule="evenodd" clipRule="evenodd">
           {head === 0 && (
             <g>
               <path
@@ -364,7 +364,7 @@ function Character({
             </g>
           )}
         </g>
-        <g>
+        <g className={styles.faceLayer}>
           {face === 0 && (
             <path
               fill="#000"
@@ -486,7 +486,7 @@ function Character({
             </g>
           )}
         </g>
-        <g>
+        <g className={styles.accessoryLayer}>
           {accessory === 0 && (
             <>{/* The default option is "no accessory" */}</>
           )}

@@ -31,5 +31,6 @@ export const clothesColors = [
   { label: 'White', color: 'hsl(180deg, 10%, 85%)' },
 ];
 
-export const defaultSkinColor = skinColors[0].color;
-export const defaultClothesColor = clothesColors[0].color;
+// Use warmer, more neutral defaults for better visual harmony
+export const defaultSkinColor = skinColors[5].color; // Honey - a warm, medium tone
+export const defaultClothesColor = clothesColors[5].color; // Cobalt - complements warm skin tones

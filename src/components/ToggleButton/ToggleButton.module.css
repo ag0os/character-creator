@@ -6,7 +6,7 @@
   border: 2px solid hsl(0deg, 0%, 5%);
   background: white;
   outline-offset: 2px;
-  border-radius: 1px;
+  border-radius: 4px;
   cursor: pointer;
 
   /*
@@ -26,10 +26,29 @@
     to prevent some funky scroll issues from happening.
   */
   position: relative;
+
+  /* Add smooth transitions for better UX */
+  transition: all 0.2s ease-in-out;
+
+  /* Add subtle shadow for depth */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.toggleButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-color: hsl(0deg, 0%, 20%);
 }
 
 .toggleButton[aria-pressed='true'] {
   background: hsl(0deg, 0%, 5%);
   color: white;
   border-width: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+}
+
+.toggleButton[aria-pressed='true']:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
